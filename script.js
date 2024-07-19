@@ -10,9 +10,15 @@ class script {
   hesapla() {
     let odenecekTutar = 0;
     if (this.urunleriKontrolEt(this.urunler)) {
-      this.urunler.forEach((urun) => {
-        odenecekTutar += (urun.fiyat * (100 - this.indirimOrani)) / 100;
-      });
+      if (this.kartVarmi) {
+        this.urunler.forEach((urun) => {
+          odenecekTutar += (urun.fiyat * (100 - this.indirimOrani)) / 100;
+        });
+      } else {
+        this.urunler.forEach((urun) => {
+          odenecekTutar += urun.fiyat;
+        });
+      }
     } else {
       alert("en az bir ürün satın almalısınız.");
     }

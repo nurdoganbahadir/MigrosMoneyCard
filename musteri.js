@@ -8,7 +8,7 @@ class Musteri extends script{
 
 
     hesap(){
-        super.hesapla()
+        return super.hesapla()
     }
 
 }
