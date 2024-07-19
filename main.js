@@ -24,8 +24,9 @@ let sonuc = confirm(mesaj);
 let odenecekTutar;
 
 if (sonuc) {
-  let isim = prompt("adınızı giriniz");
-  let soyisim = prompt("soyisminizi giriniz");
+  let isim = prompt("adınızı giriniz:");
+  let soyisim = prompt("soyisminizi giriniz:");
+
   const musteri = new Musteri(isim, soyisim, sonuc, urunler);
   odenecekTutar = musteri.hesapla();
 

@@ -1,4 +1,4 @@
-class Musteri extends script{
+class Musteri extends MigrosBase{
 
 
 
@@ -7,7 +7,7 @@ class Musteri extends script{
     }
 
 
-    hesap(){
+    hesapla(){
         return super.hesapla()
     }
 

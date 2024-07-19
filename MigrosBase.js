@@ -1,5 +1,5 @@
-class script {
-  indirimOrani = 20;
+class MigrosBase {
+  indirimOrani = 50;
   constructor(isim, soyisim, kartVarmi, urunler) {
     this.isim = isim;
     this.soyisim = soyisim;
@@ -9,6 +9,7 @@ class script {
 
   hesapla() {
     let odenecekTutar = 0;
+
     if (this.urunleriKontrolEt(this.urunler)) {
       if (this.kartVarmi) {
         this.urunler.forEach((urun) => {
@@ -26,10 +27,9 @@ class script {
   }
 
   urunleriKontrolEt(urunler) {
-    if ((urunler = null && urunler.length > 0)) {
+    if (urunler != null && urunler.length > 0) {
       return true;
-    } else {
-      return false;
     }
+    return false;
   }
 }
